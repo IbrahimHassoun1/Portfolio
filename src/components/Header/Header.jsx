@@ -30,11 +30,11 @@ const Header = () => {
                     <p className="opacity-80">Hello,my name is Ibrahim Hassoun,I am a full-stack web developer,I have made several real-life projects!I&apos;m also fluent in 3 Languages,feel free to check my CV. </p>
                     <div id="buttons" className="flex justify-between mt-5 transition-colors duration-300 mb-16 sm:mb-0">
                         <button className="bg-quaternary text-primary px-3 rounded-full transition-all duration-200 hover:bg-primary hover:text-white hover:border hover:border-white ease-in-out">
-                            Download CV
+                            <a href="/Curriculum Vitae(T)-5-Ibrahim Hassoun.pdf" target='_blank'>Download CV</a>
                         </button>
 
                         <button className="px-5 border border-quaternary rounded-full hover:bg-white hover:text-primary transition-colors duration-300 ease-in-out">
-                            Contact
+                            <a href="tel:+96181014323">Contact</a>
                         </button>
                     </div>
                     
