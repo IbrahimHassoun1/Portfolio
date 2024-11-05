@@ -1,0 +1,13 @@
+
+html, body {
+  overflow-x: hidden; 
+}
+
+.containers{
+  width: 95%;
+  margin: auto;
+}
+
+li{
+  list-style: none;
+}
