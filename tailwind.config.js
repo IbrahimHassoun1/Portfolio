@@ -10,7 +10,7 @@ export default {
         primary:"#001F3F",
         secondary:"#3A6D8C",
         tertiary:"#6A9AB0",
-        quaternary:"#E5E5E5",
+        quaternary:"#EAD8B1",
         light:"#ebedeb"
       },
       fontFamily:{
