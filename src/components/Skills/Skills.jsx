@@ -8,7 +8,9 @@ import {
     faReact,
     faPython,
     faPhp,
-    faNode
+    faNode,
+    faGit,
+    faWordpress
   } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SlideUpSection from "./../../effects/SlideUpSection/SlideUpSection.jsx"
@@ -37,10 +39,10 @@ const Skills = () => {
                     <TechIcon icon={faCuttlefish} name="C"/>
                     <TechIcon icon={faPython} name="Python"/>
                     <TechIcon icon={faPhp} name="php"/>
-                    <TechIcon icon={faJava} name="Java"/>
+                    <TechIcon icon={faGit} name="Git"/>
                     <TechIcon icon={faFileExcel} name="Excel"/>
                     <TechIcon icon={faFilePowerpoint} name="PowerPoint"/>
-                    <TechIcon icon={faDatabase} name="Java"/>
+                    <TechIcon icon={faWordpress} name="Wordpress"/>
                     <TechIcon icon={faJava} name="Java"/>
                     <TechIcon icon={faDatabase} name="DataBase"/>
                     
