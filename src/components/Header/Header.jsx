@@ -17,8 +17,8 @@ const Header = () => {
 
         <div onClick={()=>{setMenuIsPopped(false)}} className={`min-h-screen text-quaternary w-f font-primary flex flex-wrap-reverse ${menuIsPopped?"blur-lg":""}`}>
 
-            <div id="left" className=" w-full min-h-56 sm:w-2/5 bg-quaternary text-primary pt-16 flex flex-col relative"> 
-            <SlideHorizontalSection direction='left' time='1.5s' className=" sm:my-auto m-auto z-10  bg-red-500  h-60 w-60 -mt-24  mb-12 sm:h-96 sm:w-96 sm:-mr-9 rounded-full overflow-hidden"><img src={pfp} alt="pfp"  className=''/></SlideHorizontalSection>
+            <div id="left" className=" w-full min-h-56 sm:w-2/5 bg-quaternary text-primary sm:pt-16 flex flex-col relative"> 
+            <SlideHorizontalSection direction='left' time='1.5s' className=" sm:my-auto m-auto z-10  bg-red-500  h-60 w-60   mb-12 sm:h-96 sm:w-96 sm:-mr-9 rounded-full overflow-hidden"><img src={pfp} alt="pfp"  className=''/></SlideHorizontalSection>
             
 
             </div>
