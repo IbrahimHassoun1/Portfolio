@@ -7,6 +7,7 @@ import NavPopUp from "./components/NavPopUp/NavPopUp";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Languages from "./components/Languages/Languages";
+import Education from "./components/Education/Education";
 
 
 
@@ -22,6 +23,7 @@ const App = () => {
       <Projects/>
       <Skills/>
       <Languages/>
+      <Education/>
     </div>
   );
 }
