@@ -10,8 +10,8 @@ const Navbar = () => {
   return (
     <div className={`flex bg-transparent z-10 absolute top-0 left-0 w-full h-16 ${menuIsPopped?"blur-lg":""}`}>
         <div className="content containers flex justify-between">
-            <h1 direction='left' className={`font-secondary font-extralight text-2xl sm:text-primary text-quaternary`}>IBRAHIM HASSOUN</h1>
-            <div className="text-white" onClick={()=>{setMenuIsPopped(true)}}><FontAwesomeIcon icon={faBars} className='h-8 text-quaternary cursor-pointer'/></div>
+            <h1 direction='left' className={`font-secondary font-extralight text-2xl sm:text-primary text-quaternary hidden sm:block`}>IBRAHIM HASSOUN</h1>
+            <div className="text-white sm:ml-0 ml-auto" onClick={()=>{setMenuIsPopped(true)}}><FontAwesomeIcon icon={faBars} className='h-8 text-quaternary cursor-pointer'/></div>
         </div>
         
     </div>

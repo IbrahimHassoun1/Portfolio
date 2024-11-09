@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const TechIcon = ({icon,name}) => {
   return (
-    <div className="flex flex-col shadow-sm hover:shadow-lg h-20 w-20 justify-center items-center rounded-lg hover:mr-3   hover:shadow-secondary shadow-secondary">
+    <div className="flex flex-col shadow-sm hover:shadow-lg h-20 w-20 justify-center items-center rounded-lg hover:mr-3   hover:shadow-secondary shadow-secondary transition-all duration-500">
         <FontAwesomeIcon icon={icon}/>
         <h1 className="text-sm text-center">{name}</h1>
     </div>
