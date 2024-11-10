@@ -12,7 +12,7 @@ const EducationCard = ({ title, description, gpa, transcripts, date, icon }) => 
 
   return (
     <SlideUpSection
-      className="min-h-20 overflow-hidden w-full text-lg border border-secondary rounded-lg cursor-pointer hover:bg-secondary   transition-all duration-500 hover:mr-3 hover:mb-3 shadow-tertiary shadow-sm hover:shadow-md hover:shadow-tertiary p-4 sm:p-6 md:p-8"
+      className="min-h-20 h-fit overflow-hidden w-full text-lg border border-secondary rounded-lg cursor-pointer hover:bg-secondary   transition-all duration-500 hover:mr-3 hover:mb-3 shadow-tertiary shadow-sm hover:shadow-md hover:shadow-tertiary p-4 sm:p-6 md:p-8"
     >
       <div className="content w-full flex flex-col pl-4 justify-between space-y-4" onClick={toggleDetails}>
       

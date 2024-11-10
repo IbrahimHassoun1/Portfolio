@@ -7,6 +7,7 @@ const ProjectCard = ({ videoSrc, description, title, direction, time, code, link
   return (
     <SlideUpSection direction={direction} time={time} className="text-white w-full sm:w-3/5 pb-4 min-h mb-3 shadow-sm hover:shadow-lg hover:shadow-secondary shadow-secondary hover:mr-2 hover:mb-2 transition-all duration-300 rounded-xl overflow-hidden flex flex-col">
       <div className="border-b">
+        <a href={link} target="_blank">
         <video 
           src={videoSrc} 
           loop
@@ -15,6 +16,7 @@ const ProjectCard = ({ videoSrc, description, title, direction, time, code, link
           className="cursor-pointer w-full" 
           alt=""
         />
+        </a>
       </div>
       <div id="project-description" className="bg-primary h-full pl-3 mt-3">
         <div className="flex justify-between">

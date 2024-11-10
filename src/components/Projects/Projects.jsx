@@ -19,8 +19,7 @@ const Projects = () => {
     { name: "Node.js", icon: faNodeJs },
     {name:"MongoDB",icon:faDatabase}
   ]}/>
-
-            <ProjectCard direction="left" time={100} videoSrc="/tl_alrabaa.mp4" description="This is a real-life e-commerce project" title="Tl-Alrabaa" link="https://tl-alrabaa.vercel.app/" code="https://github.com/IbrahimHassoun1/Tl-Alrabaa" />
+  
            </table>
         
     </div>
