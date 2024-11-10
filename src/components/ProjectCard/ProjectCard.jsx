@@ -13,6 +13,7 @@ const ProjectCard = ({ videoSrc, description, title, direction, time, code, link
           loop
           autoPlay
           muted
+          playsInline
           className="cursor-pointer w-full" 
           alt=""
         />
