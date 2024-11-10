@@ -1,4 +1,4 @@
-import pfp from './../../assets/Profile_Picture.jpg'
+import pfp from '/assets/Profile_Picture.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram ,faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
