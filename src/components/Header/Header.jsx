@@ -25,11 +25,11 @@ const Header = () => {
 
             <div id="right" className="w-full sm:w-3/5 pt-16 flex flex-col">
                 <FadeInSection time='2s' id="right-content" className="w-1/2 m-auto font-b">
-                    <TypingEffect text='Full-Stack Developer' speed="300" />
+                    <div className="w-full sm:w-1/2"><TypingEffect text='Full-Stack Developer And Science Content Creator' speed="200" /></div>
                     <h1 className="text-4xl">IBRAHIM HASSOUN  </h1>
-                    <p className="opacity-80">Hello,my name is Ibrahim Hassoun,I am a full-stack web developer,I have made several real-life projects!I&apos;m also fluent in 3 Languages,feel free to check my CV. </p>
-                    <div id="buttons" className="flex justify-between mt-5 transition-colors duration-300 mb-16 sm:mb-0">
-                        <button className="bg-quaternary text-primary px-3 rounded-full transition-all duration-200 hover:bg-primary hover:text-white hover:border hover:border-white ease-in-out">
+                    <p className="opacity-80">Hi! I’m a full stack dev with two degrees, fluent in three languages, a book lover, and a science enthusiast who makes short videos breaking down cool concepts. Let’s create something awesome! </p>
+                    <div id="buttons" className="flex flex-col sm:flex-row justify-between mt-5 transition-colors duration-300 mb-16 sm:mb-0">
+                        <button className="bg-quaternary text-primary mb-3 px-3 rounded-full transition-all duration-200 hover:bg-primary hover:text-white hover:border hover:border-white ease-in-out">
                             <a href="/Curriculum Vitae(T)-5-Ibrahim Hassoun.pdf" target='_blank'>Download CV</a>
                         </button>
 

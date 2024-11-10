@@ -8,6 +8,7 @@ import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Languages from "./components/Languages/Languages";
 import Education from "./components/Education/Education";
+import Books from "./components/Books/Books";
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
       <Skills/>
       <Languages/>
       <Education/>
+      <Books/>
     </div>
   );
 }
