@@ -5,22 +5,22 @@ import { useRef, useState, useEffect } from "react";
 import SlideUpSection from "../../effects/SlideUpSection/SlideUpSection";
 
 const ProjectCard = ({ videoSrc, description, title, direction, time, code, link, features, technologies }) => {
-  const [isInView, setIsInView] = useState(false);
   const videoRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
 
   // Intersection Observer for video autoplay when it comes into view
   useEffect(() => {
-    const videoElement = videoRef.current;  // Store the ref value in a variable
+    const videoElement = videoRef.current;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+          setIsInView(true); // Video has come into view, autoplay it
         } else {
-          setIsInView(false);
+          setIsInView(false); // Video is out of view, pause it
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the video is in view
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
     );
 
     if (videoElement) {
@@ -29,10 +29,21 @@ const ProjectCard = ({ videoSrc, description, title, direction, time, code, link
 
     return () => {
       if (videoElement) {
-        observer.unobserve(videoElement); // Cleanup using the stored variable
+        observer.unobserve(videoElement); // Cleanup observer
       }
     };
-  }, []); // Empty dependency array since we only need this once on mount
+  }, []); // Empty dependency array ensures this runs once on mount
+
+  // Handle video autoplay based on the isInView state
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isInView) {
+        videoRef.current.play(); // Play the video when it comes into view
+      } else {
+        videoRef.current.pause(); // Pause the video when it goes out of view
+      }
+    }
+  }, [isInView]); // This effect runs whenever isInView changes
 
   return (
     <SlideUpSection direction={direction} time={time} className="text-white w-full sm:w-3/5 pb-4 min-h mb-3 shadow-sm hover:shadow-lg hover:shadow-secondary shadow-secondary hover:mr-2 hover:mb-2 transition-all duration-300 rounded-xl overflow-hidden flex flex-col">
@@ -41,7 +52,6 @@ const ProjectCard = ({ videoSrc, description, title, direction, time, code, link
           ref={videoRef}
           src={videoSrc} 
           loop
-          autoPlay={isInView}  // Autoplay only when the video is in view
           muted
           playsInline
           className="cursor-pointer w-full" 
