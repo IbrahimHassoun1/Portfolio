@@ -1,23 +1,52 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faCode, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { useRef, useState, useEffect } from "react";
 import SlideUpSection from "../../effects/SlideUpSection/SlideUpSection";
 
 const ProjectCard = ({ videoSrc, description, title, direction, time, code, link, features, technologies }) => {
+  const [isInView, setIsInView] = useState(false);
+  const videoRef = useRef(null);
+
+  // Intersection Observer for video autoplay when it comes into view
+  useEffect(() => {
+    const videoElement = videoRef.current;  // Store the ref value in a variable
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        } else {
+          setIsInView(false);
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is in view
+    );
+
+    if (videoElement) {
+      observer.observe(videoElement);
+    }
+
+    return () => {
+      if (videoElement) {
+        observer.unobserve(videoElement); // Cleanup using the stored variable
+      }
+    };
+  }, []); // Empty dependency array since we only need this once on mount
+
   return (
     <SlideUpSection direction={direction} time={time} className="text-white w-full sm:w-3/5 pb-4 min-h mb-3 shadow-sm hover:shadow-lg hover:shadow-secondary shadow-secondary hover:mr-2 hover:mb-2 transition-all duration-300 rounded-xl overflow-hidden flex flex-col">
       <div className="border-b">
-        
         <video 
+          ref={videoRef}
           src={videoSrc} 
           loop
-          autoPlay
+          autoPlay={isInView}  // Autoplay only when the video is in view
           muted
           playsInline
           className="cursor-pointer w-full" 
           alt=""
         />
-       
       </div>
       <div id="project-description" className="bg-primary h-full pl-3 mt-3">
         <div className="flex justify-between">
@@ -51,7 +80,6 @@ const ProjectCard = ({ videoSrc, description, title, direction, time, code, link
           </div>
         )}
 
-        
         {/* Render Technologies Used */}
         {technologies && technologies.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-4">
