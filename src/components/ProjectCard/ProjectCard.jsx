@@ -54,7 +54,8 @@ const ProjectCard = ({ videoSrc, description, title, direction, time, code, link
           loop
           muted
           playsInline
-          className="cursor-pointer w-full" 
+          autoPlay={isInView} // Ensure autoplay works when the video is in view
+          className="cursor-pointer w-full h-auto" // Ensure height is adjusted properly
           alt=""
         />
       </div>
