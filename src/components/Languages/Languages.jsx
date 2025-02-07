@@ -7,7 +7,7 @@ import animationData from "./../../animations/Language.json"; // Path to your do
 
 const Languages = () => {
   return (
-    <div className="containers flex justify-center">
+    <div id="languages" className="containers flex justify-center">
         <div className="w-full flex flex-col  items-center text-quaternary">
             <SlideUpSection className="text-5xl flex justify-center items-center mb-9 max-h-9">Languages <Lottie  animationData={animationData} loop={true} className="h-full"/></SlideUpSection>
            

@@ -8,7 +8,7 @@ import { faComputer, faDna, faMicroscope } from "@fortawesome/free-solid-svg-ico
 
 const Education = () => {
   return (
-    <div id="skills" className="containers min-h-60 flex flex-col items-center ">
+    <div id="education" className="containers min-h-60 flex flex-col items-center ">
         <div id="content" className="text-quaternary mt-20 mb-12 flex flex-col items-center w-full">
 
             <SlideUpSection className="text-5xl mt-3 mx-auto font-bold h-8 flex justify-center items-center mb-9"> Education <Lottie  animationData={animationData2} loop={true} className="h-20"/></SlideUpSection>

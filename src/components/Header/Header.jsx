@@ -8,22 +8,19 @@ import { useContext } from 'react';
 import { MyContext } from '../../context/MyContext';
 import SlideHorizontalSection from '../../effects/SlideHorizontalSection/SlideHorizontalSection';
 import FadeInSection from "./../../effects/FadeInSection/FadeInSection.jsx"
-
+import "./Header.css"
 const Header = () => {
     const {menuIsPopped,setMenuIsPopped}=useContext(MyContext)
   return (
 
     <div id='header' className="relative">
 
-        <div onClick={()=>{setMenuIsPopped(false)}} className={`min-h-screen text-quaternary w-f font-primary flex flex-wrap-reverse ${menuIsPopped?"blur-lg":""}`}>
+        <div onClick={()=>{setMenuIsPopped(false)}} className={`relative min-h-[calc(70vh)] text-quaternary w-f font-primary flex flex-wrap ${menuIsPopped?"blur-lg":""}`}>
 
-            <div id="left" className=" w-full min-h-56 sm:w-2/5 bg-quaternary text-primary sm:pt-16 flex flex-col relative"> 
-            <SlideHorizontalSection direction='left' time='1.5s' className=" sm:my-auto m-auto z-10  bg-red-500  h-60 w-60   mb-12 mt-12 sm:mt-0 sm:h-96 sm:w-96 sm:-mr-9 rounded-full overflow-hidden"><img src={pfp} alt="pfp"  className=''/></SlideHorizontalSection>
             
 
-            </div>
-
-            <div id="right" className="w-full sm:w-3/5 pt-16 flex flex-col">
+            <div id="left" className=" relative w-full md:w-3/5  pt-16 flex flex-col">
+           
                 <FadeInSection time='2s' id="right-content" className="w-1/2 m-auto font-b">
                     <div className="w-full sm:w-1/2"><TypingEffect text='Full-Stack Developer And Science Content Creator' speed="200" /></div>
                     <h1 className="text-4xl">IBRAHIM HASSOUN  </h1>
@@ -47,7 +44,24 @@ const Header = () => {
                 <li><a href="mailto:ihassoun73@gmail.com"  className='transition-all ease-in-out duration-300 hover:bg-transparent  hover:text-secondary  active:text-tertiary'><FontAwesomeIcon icon={faEnvelope } className='text-6xl'/></a></li>
                 </SlideHorizontalSection>
             </div>
+            
+            <div id="right" className=" w-full min-h-56 md:w-2/5 bg-quaternary text-primary sm:pt-16 flex flex-col relative"> 
+            <svg
+            className=" liquid-shape  h-[calc(100vh+1px)] left-[calc(-1px)] top-0 -scale-x-100  md:absolute md:block hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 1440" 
+        >
+            <path
+            className='m-auto'
+            fill="#001F3F"
+            d="M224,0L197.3,30C171,60,117,120,117.3,180C117,240,171,300,176,360C181,420,139,480,122.7,540C107,600,117,660,133.3,720C149,780,171,840,160,900C149,960,107,1020,101.3,1080C96,1140,128,1200,149.3,1260C171,1320,181,1380,186.7,1410L192,1440L320,1440L320,1410C320,1380,320,1320,320,1260C320,1200,320,1140,320,1080C320,1020,320,960,320,900C320,840,320,780,320,720C320,660,320,600,320,540C320,480,320,420,320,360C320,300,320,240,320,180C320,120,320,60,320,30L320,0Z"
+            ></path>
+        </svg>
+        
 
+            <SlideHorizontalSection direction='right' time='1.5s' className="  m-auto z-30 h-1/2  rounded-full overflow-hidden"><img src={pfp} alt="pfp"  className='h-full w-full'/></SlideHorizontalSection>
+            </div>
+            
          </div>
 </div>
 

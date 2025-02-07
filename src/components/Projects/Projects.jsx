@@ -8,7 +8,7 @@ import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen containers text-quaternary flex flex-col flex-wrap items-center ">
+    <div id='projects' className="min-h-screen containers text-quaternary flex flex-col flex-wrap items-center ">
         <SlideUpSection className="text-5xl my-9 mx-auto font-bold flex justify-center items-center h-8">PROJECTS <Lottie  animationData={animationData} loop={true} className="h-20"/></SlideUpSection>
         
         <table className="min-h-72 w-full  flex flex-wrap justify-around mt-3">
