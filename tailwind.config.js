@@ -11,6 +11,7 @@ export default {
         secondary:"#3A6D8C",
         tertiary:"#6A9AB0",
         quaternary:"#ebedeb",
+        attention:"#d5a64c",
         light:"#ebedeb"
       },
       fontFamily:{
