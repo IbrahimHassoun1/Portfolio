@@ -64,7 +64,7 @@ const NavPopUp = () => {
         <SlideHorizontalSection time="1s" direction="left">
           <button
             className="bg-transparent text-quaternary border border-quaternary w-1/2 h-12 m-auto mt-12 rounded-full flex justify-center items-center cursor-pointer hover:bg-quaternary hover:border-quaternary hover:text-primary active:bg-white active:text-primary transition-all ease-in-out duration-300"
-            onClick={() => scrollToElement('contact')}
+            onClick={() =>{ scrollToElement('contact');setMenuIsPopped(false)}}
           >
             <FontAwesomeIcon icon={faPhone} className="mr-2" /> Contact
           </button>

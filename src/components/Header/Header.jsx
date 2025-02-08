@@ -11,6 +11,17 @@ import FadeInSection from "./../../effects/FadeInSection/FadeInSection.jsx"
 import "./Header.css"
 const Header = () => {
     const {menuIsPopped,setMenuIsPopped}=useContext(MyContext)
+    
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth', 
+        block: 'start', 
+      });
+    }
+  };
+
   return (
 
     <div id='header' className="relative">
@@ -20,7 +31,7 @@ const Header = () => {
             
 
             <div id="left" className=" relative w-full md:w-3/5  pt-16 flex flex-col">
-           
+        
                 <FadeInSection time='2s' id="right-content" className="w-1/2 m-auto font-b">
                     <div className="w-full sm:w-1/2"><TypingEffect text='Full-Stack Developer And Science Content Creator' speed="200" /></div>
                     <h1 className="text-4xl">IBRAHIM HASSOUN  </h1>
@@ -30,8 +41,8 @@ const Header = () => {
                             <a href="/Curriculum Vitae(T)-5-Ibrahim Hassoun.pdf" target='_blank'>Download CV</a>
                         </button>
 
-                        <button className="px-5 border border-quaternary rounded-full hover:bg-white hover:text-primary transition-colors duration-300 ease-in-out">
-                            <a href="tel:+96181014323">Contact</a>
+                        <button  onClick={() =>{ scrollToElement('contact');setMenuIsPopped(false)}} className="px-5 border border-quaternary rounded-full hover:bg-white hover:text-primary transition-colors duration-300 ease-in-out">
+                            Contact
                         </button>
                     </div>
                     
@@ -60,6 +71,7 @@ const Header = () => {
         
 
             <SlideHorizontalSection direction='right' time='1.5s' className="  m-auto z-30 h-1/2  rounded-full overflow-hidden"><img src={pfp} alt="pfp"  className='h-full w-full'/></SlideHorizontalSection>
+            <SlideHorizontalSection direction='right' time='1.5s' className="bg-attention  text-quaternary rounded-full w-1/2 h-12 text-4xl hover:opacity-35 active:bg-primary m-auto text-center cursor-pointer"  > <button onClick={() =>{ scrollToElement('contact')}}>Hire me!</button></SlideHorizontalSection>
             </div>
             
          </div>
